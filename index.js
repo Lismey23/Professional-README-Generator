@@ -2,7 +2,7 @@ const fs = require("fs")
 
 const inquirer = require('inquirer')
 inquirer
-
+const userLicence = ['ISC','CC','MIT','GNU','None']
 const startReadme = "Welcome to the Professional Readme Generator.<br>Let's build a perfect Readme file for your projects using the information you provide"
 
 console.log(startReadme)
@@ -11,7 +11,7 @@ const userInput =()=>
   inquirer.prompt([
     {
         type:'input',
-        name:'Title',
+        name:'title',
         message:'Whats the title of your project',
 
     },
@@ -52,10 +52,10 @@ const userInput =()=>
     },
 
     {
-        type:'input',
+        type:'list',
         name:'licence',
-        choices:['ISC','CC','MIT','GNU','None'],
         message:'Please select from the choices listed below the licence of your project',
+        choices:userLicence,
 
     },
 
