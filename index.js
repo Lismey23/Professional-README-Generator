@@ -78,6 +78,7 @@ const userInput =()=>
 
 const buildReadme = function(answers) {
 return `# ${answers.title}
+![license](https://img.shields.io/badge/License-${answers.licence}-green.svg "License Badge")
 
 ## Description
 ${answers.description}
@@ -107,7 +108,7 @@ ${answers.tests}
 
 ## Questions
 Please feel free to reach me with additional questions: ${answers.email}
-GitHub profile: $(answers.githubUser)
+GitHub profile: ${answers.githubUser}
 `;};
 
 userInput()
